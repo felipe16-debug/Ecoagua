@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubra as principais causas da poluição hídrica e como o descarte de lixo, o esgoto sem tratamento e o uso de agrotóxicos afetam o meio ambiente.">
+  <title>EcoÁgua - Causas da Poluição Hídrica</title>
+
+  <!-- Tailwind + Fontes -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .bg-hero {
+      background-image: url('fundo-rio.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body class="bg-hero text-[#2C3A3A] relative">
+  <!-- Camada de cor para leitura -->
+  <div class="absolute inset-0 bg-[#F0E6DD]/80 backdrop-blur-[2px]"></div>
+
+  <!-- Conteúdo principal -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD]/80 px-5 py-4 backdrop-blur-md shadow-sm sm:px-10 lg:px-20">
+      <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition-colors">
+        <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
+        <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+  <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
+  <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
+  <a href="consequencias.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Consequências</a>
+  <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
+</nav>
+        <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
+        <a href="#causas" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="causas" class="flex-grow px-5 py-16 sm:px-10 lg:px-20">
+      <div class="mx-auto max-w-6xl text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#2C3A3A] mb-10 tracking-tight">
+          Causas da Poluição Hídrica
+        </h2>
+        <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg">
+          A poluição hídrica é causada por diversas ações humanas que contaminam rios, lagos e oceanos.  
+          Conheça as principais causas e como elas afetam o meio ambiente.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Descarte de Lixo -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined text-[#4C7B6C]">delete</span>
+              Descarte de Lixo
+            </h3>
+            <p class="text-[#2C3A3A]">
+              O acúmulo de resíduos sólidos, como plásticos e metais, contamina a água e ameaça a vida aquática.
+            </p>
+          </div>
+
+          <!-- Esgoto sem Tratamento -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined text-[#4C7B6C]">factory</span>
+              Esgoto sem Tratamento
+            </h3>
+            <p class="text-[#2C3A3A]">
+              O despejo de esgoto doméstico e industrial sem tratamento polui rios, mares e lençóis freáticos.
+            </p>
+          </div>
+
+          <!-- Agrotóxicos e Fertilizantes -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined text-[#4C7B6C]">eco</span>
+              Agrotóxicos e Fertilizantes
+            </h3>
+            <p class="text-[#2C3A3A]">
+              Produtos químicos usados na agricultura infiltram no solo e atingem as águas subterrâneas, prejudicando ecossistemas.
+            </p>
+          </div>
+
+          <!-- Desmatamento -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined text-[#4C7B6C]">forest</span>
+              Desmatamento
+            </h3>
+            <p class="text-[#2C3A3A]">
+              A retirada da vegetação reduz a filtragem natural da água e causa o assoreamento de rios e lagos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C3A3A]/90 text-[#E8D7C1] py-10 text-center mt-10 backdrop-blur-md">
+      <p class="text-sm sm:text-base">
+        © 2025 <span class="font-semibold">EcoÁgua</span>. Todos os direitos reservados. <br>
+        <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
+      </p>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition-transform hover:scale-110">
+      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
+    </button>
+  </div>
+
+  <!-- Script do botão -->
+  <script>
+    const btnTopo = document.getElementById('btnTopo');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btnTopo.classList.remove('hidden');
+        btnTopo.classList.add('flex');
+      } else {
+        btnTopo.classList.add('hidden');
+        btnTopo.classList.remove('flex');
+      }
+    });
+
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
