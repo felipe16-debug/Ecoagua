@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+<head>
+  <style>
+  .bg-nature-tan { background-color: #F5EFE7; } /* cor mais leve */
+.bg-nature-dark-green { background-color: #2F4F4F; } /* verde musgo mais elegante */
+.bg-nature-light-green { background-color: #8EB69B; } /* verde médio agradável */
+.bg-nature-brown { background-color: #6B4F3E; } /* marrom mais quente */
+  .card {
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Transições suaves em links e botões */
+  a, button {
+    transition: all 0.3s ease-in-out;
+  }
+  header {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  header.scrolled {
+    background-color: rgba(240, 230, 221, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Scrollbar estilizado */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #3B5745;
+    border-radius: 10px;
+  }
+  .card {
+  border-radius: 1rem; /* bordas mais suaves */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+a, button {
+  transition: all 0.3s ease-in-out;
+}
+header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(240, 230, 221, 0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+@keyframes backgroundMove {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+body {
+  background-image: url('textura.png');
+  background-size: cover;
+  animation: backgroundMove 20s linear infinite alternate;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F0E6DD;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3B5745;
+  border-radius: 10px;
+}
+button:hover, a:hover {
+  background-color: #6B4F3E; /* marrom quente */
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Águas Claras - Poluição Hídrica</title>
+
+<!-- 🌿 Tailwind e fontes -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<!-- 🌎 Meta SEO -->
+<meta name="description" content="Descubra as causas, consequências e soluções para a poluição hídrica. Águas Claras é um site educativo que promove a conscientização ambiental e a preservação das águas.">
+
+<style type="text/tailwindcss">
+    body { font-family: 'Inter', sans-serif; }
+    .bg-nature-tan { background-color: #F0E6DD; }
+    .bg-nature-dark-green { background-color: #3B5745; }
+    .bg-nature-light-green { background-color: #799A82; }
+    .bg-nature-brown { background-color: #7A5C47; }
+    .text-nature-dark-green { color: #3B5745; }
+    .text-nature-brown { color: #7A5C47; }
+    .text-nature-light-brown { color: #D3B8A5; }
+    /* 🌊 Animações personalizadas */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+</style>
+</head>
+
+<body class="bg-nature-tan font-display text-nature-dark-green" style="background-image: url('textura.png'); background-size: cover; background-attachment: fixed;">
+<div class="flex min-h-screen flex-col">
+
+<!-- 🔷 HEADER -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-nature-brown/20 bg-nature-tan/80 px-4 py-3 backdrop-blur-sm sm:px-10 lg:px-20 animate-fadeIn">
+  <a class="flex items-center gap-3 text-nature-dark-green" href="#">
+    <span class="material-symbols-outlined text-3xl">water_drop</span>
+    <h1 class="text-xl font-bold">Águas Claras</h1>
+  </a>
+
+  <nav class="hidden items-center gap-8 md:flex">
+    <a class="text-sm font-medium transition-colors hover:text-nature-brown" href="#temas">Temas</a>
+    <a class="text-sm font-medium transition-colors hover:text-nature-brown" href="causas.html">Causas</a>
+    <a class="text-sm font-medium transition-colors hover:text-nature-brown" href="#footer">Sobre</a>
+    <a class="text-sm font-medium transition-colors hover:text-nature-brown" href="#footer">Contato</a>
+  </nav>
+</header>
+
+<!-- 💧 MAIN -->
+<main class="flex-1 px-4 py-16 sm:px-10 lg:px-20" id="temas">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-nature-dark-green sm:text-4xl animate-fadeIn">
+        Entenda a Poluição Hídrica
+      </h2>
+      <p class="mt-4 text-lg text-nature-brown">
+        Explore as causas, consequências e as soluções para este problema global.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- 🌿 Causas -->
+      <div class="overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl animate-fadeIn [animation-delay:0.2s]">
+        <div class="flex h-48 items-center justify-center bg-nature-light-green text-white">
+          <span class="material-symbols-outlined text-6xl opacity-80 animate-float">factory</span>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold text-nature-dark-green">Causas</h3>
+          <p class="mt-2 text-nature-brown">Origens do problema</p>
+          <a href="causas.html" class="mt-4 inline-block rounded bg-nature-dark-green px-4 py-2 text-white hover:bg-nature-brown transition-colors">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- ☠️ Consequências -->
+      <div class="overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl animate-fadeIn [animation-delay:0.6s]">
+        <div class="flex h-48 items-center justify-center bg-nature-brown text-white">
+          <span class="material-symbols-outlined text-6xl opacity-80 animate-float">skull</span>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold text-nature-dark-green">Consequências</h3>
+          <p class="mt-2 text-nature-brown">Impactos no ecossistema</p>
+          <a href="consequencias.html" class="mt-4 inline-block rounded bg-nature-dark-green px-4 py-2 text-white hover:bg-nature-brown transition-colors">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- 🌎 Soluções -->
+      <div class="overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl animate-fadeIn [animation-delay:0.4s]">
+        <div class="flex h-48 items-center justify-center bg-nature-dark-green text-white">
+          <span class="material-symbols-outlined text-6xl opacity-80 animate-float">recycling</span>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold text-nature-dark-green">Soluções</h3>
+          <p class="mt-2 text-nature-brown">Caminhos para a recuperação</p>
+          <a href="solucoes.html" class="mt-4 inline-block rounded bg-nature-dark-green px-4 py-2 text-white hover:bg-nature-brown transition-colors">Ver mais</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ⚓ FOOTER -->
+<footer class="bg-nature-dark-green text-nature-light-brown" id="footer">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-10 lg:px-20">
+    <div class="flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-2xl">water_drop</span>
+        <span class="font-semibold">Águas Claras</span>
+      </div>
+      <p class="text-sm">© 2024. Todos os direitos reservados.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-white" href="#">Termos</a>
+        <a class="hover:text-white" href="#">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+</body>
+</html>" 
