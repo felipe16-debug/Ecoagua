@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Causas da Poluição Hídrica</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-</head>
-<body class="bg-cover bg-center text-white min-h-screen" style="background-image: url('fundo.jpg');">
-  <header class="bg-black/60 p-4">
-    <nav class="flex justify-center space-x-6">
-      <a href="index.html" class="hover:text-teal-300">Início</a>
-      <a href="causas.html" class="text-teal-400 font-bold">Causas</a>
-      <a href="consequencias.html" class="hover:text-teal-300">Consequências</a>
-      <a href="solucoes.html" class="hover:text-teal-300">Soluções</a>
-    </nav>
-  </header>
+<!-- 🔷 MENU PADRONIZADO -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#3B5745]/90 px-4 py-3 backdrop-blur-sm sm:px-10 lg:px-20">
+  <a href="index.html" class="flex items-center gap-3 text-[#F0E6DD]">
+    <span class="material-symbols-outlined text-3xl">water_drop</span>
+    <h1 class="text-xl font-bold">EcoÁgua</h1>
+  </a>
 
+  <nav class="hidden items-center gap-8 md:flex text-[#F0E6DD]">
+    <a href="index.html" class="text-sm font-medium transition-colors hover:text-[#D3B8A5]">Início</a>
+    <a href="causas.html" class="text-sm font-medium transition-colors hover:text-[#D3B8A5]">Causas</a>
+    <a href="consequencias.html" class="text-sm font-medium transition-colors hover:text-[#D3B8A5]">Consequências</a>
+    <a href="solucoes.html" class="text-sm font-medium transition-colors hover:text-[#D3B8A5]">Soluções</a>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <button id="menu-btn" class="md:hidden text-[#F0E6DD]">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
+</header>
+
+<!-- Menu Mobile Dropdown -->
+<nav id="mobile-menu" class="hidden flex-col bg-[#
   <main class="max-w-4xl mx-auto bg-black/60 p-6 rounded-2xl mt-10">
     <h1 class="text-4xl font-bold mb-6 text-teal-300">Causas da Poluição Hídrica</h1>
     <p class="text-lg leading-relaxed">
