@@ -15,20 +15,16 @@
   <style type="text/tailwindcss">
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url('textura.png');
-      background-size: cover;
-      background-attachment: fixed;
+      background: linear-gradient(180deg, #EAF7F9 0%, #F7FAFA 100%);
+      color: #184E77;
     }
 
-    /* Cores naturais */
-    .bg-nature-tan { background-color: #F0E6DD; }
-    .bg-nature-dark-green { background-color: #3B5745; }
-    .bg-nature-light-green { background-color: #799A82; }
-    .bg-nature-brown { background-color: #7A5C47; }
-    .text-nature-dark-green { color: #3B5745; }
-    .text-nature-brown { color: #7A5C47; }
+    header.scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+    }
 
-    /* Animações */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -40,97 +36,91 @@
       50% { transform: translateY(-8px); }
     }
     .animate-float { animation: float 3s ease-in-out infinite; }
-
-    /* Efeitos no header */
-    header {
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    header.scrolled {
-      background-color: rgba(240, 230, 221, 0.9);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      backdrop-filter: blur(8px);
-    }
   </style>
 </head>
 
-<body class="bg-nature-tan text-nature-dark-green">
+<body>
   <div class="flex min-h-screen flex-col">
 
     <!-- 🔷 HEADER -->
-    <header class="fixed top-0 w-full z-50 border-b border-nature-brown/20 bg-nature-tan/90 backdrop-blur-md">
+    <header class="fixed top-0 w-full z-50 transition-all border-b border-teal-200 bg-white/80 backdrop-blur-md">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-10">
-
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2 text-nature-dark-green">
-          <span class="material-symbols-outlined text-3xl">water_drop</span>
+        <a href="index.html" class="flex items-center gap-2 text-teal-700">
+          <span class="material-symbols-outlined text-3xl text-teal-700">water_drop</span>
           <h1 class="text-lg font-bold sm:text-xl">Águas Claras</h1>
         </a>
 
-        <!-- Menu desktop -->
-        <nav class="hidden md:flex items-center gap-8 font-medium">
-          <a href="index.html" class="hover:text-nature-brown transition">Home</a>
-          <a href="causas.html" class="hover:text-nature-brown transition">Causas</a>
-          <a href="consequencias.html" class="hover:text-nature-brown transition">Consequências</a>
-          <a href="solucoes.html" class="hover:text-nature-brown transition">Soluções</a>
+        <nav class="hidden md:flex items-center gap-8 font-medium text-teal-800">
+          <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+          <a href="causas.html" class="hover:text-teal-600 transition">Causas</a>
+          <a href="consequencias.html" class="hover:text-teal-600 transition">Consequências</a>
+          <a href="solucoes.html" class="hover:text-teal-600 transition">Soluções</a>
         </nav>
 
-        <!-- Botão menu mobile -->
-        <button id="menu-btn" class="md:hidden text-nature-dark-green">
+        <button id="menu-btn" class="md:hidden text-teal-700">
           <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
 
-      <!-- Menu mobile -->
-      <div id="mobile-menu" class="hidden flex-col bg-nature-tan border-t border-nature-brown/20 text-center md:hidden">
-        <a href="index.html" class="py-3 hover:bg-nature-light-green/20">Home</a>
-        <a href="causas.html" class="py-3 hover:bg-nature-light-green/20">Causas</a>
-        <a href="consequencias.html" class="py-3 hover:bg-nature-light-green/20">Consequências</a>
-        <a href="solucoes.html" class="py-3 hover:bg-nature-light-green/20">Soluções</a>
+      <div id="mobile-menu" class="hidden flex-col bg-white text-center border-t border-teal-200 md:hidden">
+        <a href="index.html" class="py-3 hover:bg-teal-50">Home</a>
+        <a href="causas.html" class="py-3 hover:bg-teal-50">Causas</a>
+        <a href="consequencias.html" class="py-3 hover:bg-teal-50">Consequências</a>
+        <a href="solucoes.html" class="py-3 hover:bg-teal-50">Soluções</a>
       </div>
     </header>
 
-    <!-- 💧 MAIN -->
-    <main class="flex-1 pt-28 pb-16 px-6 sm:px-10 lg:px-20">
-      <div class="mx-auto max-w-6xl text-center animate-fadeIn">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Entenda a Poluição Hídrica</h2>
-        <p class="text-nature-brown text-lg mb-12">Explore as causas, consequências e as soluções para este problema global.</p>
+    <!-- 💧 HERO SECTION -->
+    <section class="pt-28 pb-20 bg-[url('agua.jpg')] bg-cover bg-center text-white text-center relative">
+      <div class="absolute inset-0 bg-teal-900/50"></div>
+      <div class="relative z-10 px-6 sm:px-10 max-w-4xl mx-auto animate-fadeIn">
+        <h2 class="text-4xl sm:text-5xl font-extrabold mb-4">Preserve Hoje. Garanta o Amanhã.</h2>
+        <p class="text-lg sm:text-xl mb-8 text-teal-100">A poluição hídrica é um desafio global — e cada ação conta. Descubra como mudar essa realidade.</p>
+        <a href="solucoes.html" class="inline-block bg-white text-teal-800 font-semibold px-6 py-3 rounded-lg hover:bg-teal-100 transition">Saiba Como Ajudar</a>
+      </div>
+    </section>
 
-        <!-- Cards -->
+    <!-- 💧 MAIN -->
+    <main class="flex-1 py-16 px-6 sm:px-10 lg:px-20 bg-white">
+      <div class="mx-auto max-w-6xl text-center animate-fadeIn">
+        <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-teal-800">Entenda a Poluição Hídrica</h3>
+        <p class="text-teal-700 text-lg mb-12">Explore as causas, consequências e soluções para proteger nossos rios, mares e lagos.</p>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- Causas -->
-          <div class="rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
-            <div class="h-48 flex justify-center items-center bg-nature-light-green text-white">
+          <div class="rounded-2xl overflow-hidden bg-gradient-to-b from-teal-50 to-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <div class="h-48 flex justify-center items-center bg-teal-600 text-white">
               <span class="material-symbols-outlined text-6xl animate-float">factory</span>
             </div>
             <div class="p-6">
-              <h3 class="text-2xl font-bold mb-2">Causas</h3>
-              <p class="text-nature-brown mb-4">Entenda as origens do problema.</p>
-              <a href="causas.html" class="inline-block bg-nature-dark-green text-white rounded-lg px-4 py-2 hover:bg-nature-brown transition">Ver mais</a>
+              <h4 class="text-2xl font-bold mb-2 text-teal-800">Causas</h4>
+              <p class="text-teal-700 mb-4">Entenda as origens do problema e como evitá-las.</p>
+              <a href="causas.html" class="inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
 
           <!-- Consequências -->
-          <div class="rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
-            <div class="h-48 flex justify-center items-center bg-nature-brown text-white">
+          <div class="rounded-2xl overflow-hidden bg-gradient-to-b from-teal-50 to-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <div class="h-48 flex justify-center items-center bg-teal-800 text-white">
               <span class="material-symbols-outlined text-6xl animate-float">skull</span>
             </div>
             <div class="p-6">
-              <h3 class="text-2xl font-bold mb-2">Consequências</h3>
-              <p class="text-nature-brown mb-4">Os impactos no ecossistema.</p>
-              <a href="consequencias.html" class="inline-block bg-nature-dark-green text-white rounded-lg px-4 py-2 hover:bg-nature-brown transition">Ver mais</a>
+              <h4 class="text-2xl font-bold mb-2 text-teal-800">Consequências</h4>
+              <p class="text-teal-700 mb-4">Os impactos ambientais e sociais causados pela poluição hídrica.</p>
+              <a href="consequencias.html" class="inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
 
           <!-- Soluções -->
-          <div class="rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
-            <div class="h-48 flex justify-center items-center bg-nature-dark-green text-white">
+          <div class="rounded-2xl overflow-hidden bg-gradient-to-b from-teal-50 to-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <div class="h-48 flex justify-center items-center bg-teal-700 text-white">
               <span class="material-symbols-outlined text-6xl animate-float">recycling</span>
             </div>
             <div class="p-6">
-              <h3 class="text-2xl font-bold mb-2">Soluções</h3>
-              <p class="text-nature-brown mb-4">Caminhos para a recuperação das águas.</p>
-              <a href="solucoes.html" class="inline-block bg-nature-dark-green text-white rounded-lg px-4 py-2 hover:bg-nature-brown transition">Ver mais</a>
+              <h4 class="text-2xl font-bold mb-2 text-teal-800">Soluções</h4>
+              <p class="text-teal-700 mb-4">Ações práticas para reduzir danos e preservar a água.</p>
+              <a href="solucoes.html" class="inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
         </div>
@@ -138,13 +128,18 @@
     </main>
 
     <!-- ⚓ FOOTER -->
-    <footer class="bg-nature-dark-green text-nature-tan py-6 text-center">
-      <p class="text-sm">© 2025 Águas Claras — Todos os direitos reservados.</p>
+    <footer class="bg-teal-900 text-teal-100 py-8 text-center">
+      <p class="text-sm mb-2">© 2025 Águas Claras — Todos os direitos reservados.</p>
+      <div class="flex justify-center gap-4 text-teal-200">
+        <a href="#" class="hover:text-white transition"><span class="material-symbols-outlined">language</span></a>
+        <a href="#" class="hover:text-white transition"><span class="material-symbols-outlined">mail</span></a>
+        <a href="#" class="hover:text-white transition"><span class="material-symbols-outlined">share</span></a>
+      </div>
     </footer>
   </div>
 
   <script>
-    // Efeito de rolagem no header
+    // Header dinâmico
     window.addEventListener("scroll", () => {
       const header = document.querySelector("header");
       header.classList.toggle("scrolled", window.scrollY > 10);
