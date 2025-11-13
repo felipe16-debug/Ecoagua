@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" class="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Descubra as principais causas da poluição hídrica e como o descarte de lixo, o esgoto sem tratamento e o uso de agrotóxicos afetam o meio ambiente.">
   <title>EcoÁgua - Causas da Poluição Hídrica</title>
 
-  <!-- Tailwind + Fontes -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <!-- Tailwind e fontes -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -23,26 +23,22 @@
 </head>
 
 <body class="bg-hero text-[#2C3A3A] relative">
-  <!-- Camada de cor para leitura -->
+  <!-- Camada de cor para contraste -->
   <div class="absolute inset-0 bg-[#F0E6DD]/80 backdrop-blur-[2px]"></div>
 
-  <!-- Conteúdo principal -->
   <div class="relative z-10 min-h-screen flex flex-col">
-
     <!-- Header -->
     <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD]/80 px-5 py-4 backdrop-blur-md shadow-sm sm:px-10 lg:px-20">
       <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition-colors">
         <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
         <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
       </a>
+
       <nav class="hidden md:flex items-center gap-8">
-  <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
-  <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
-  <a href="consequencias.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Consequências</a>
-  <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
-</nav>
         <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
-        <a href="#causas" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
+        <a href="causas.html" class="text-sm font-medium text-[#4C7B6C] font-semibold transition">Causas</a>
+        <a href="consequencias.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Consequências</a>
+        <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
       </nav>
     </header>
 
@@ -53,53 +49,53 @@
           Causas da Poluição Hídrica
         </h2>
         <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg">
-          A poluição hídrica é causada por diversas ações humanas que contaminam rios, lagos e oceanos.  
-          Conheça as principais causas e como elas afetam o meio ambiente.
+          A poluição hídrica é resultado de diversas ações humanas que contaminam rios, lagos e oceanos.  
+          Conheça as principais causas e entenda como elas prejudicam o meio ambiente e a saúde pública.
         </p>
 
         <!-- Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Descarte de Lixo -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
               <span class="material-symbols-outlined text-[#4C7B6C]">delete</span>
               Descarte de Lixo
             </h3>
-            <p class="text-[#2C3A3A]">
+            <p class="text-[#2C3A3A] leading-relaxed">
               O acúmulo de resíduos sólidos, como plásticos e metais, contamina a água e ameaça a vida aquática.
             </p>
           </div>
 
           <!-- Esgoto sem Tratamento -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
               <span class="material-symbols-outlined text-[#4C7B6C]">factory</span>
               Esgoto sem Tratamento
             </h3>
-            <p class="text-[#2C3A3A]">
-              O despejo de esgoto doméstico e industrial sem tratamento polui rios, mares e lençóis freáticos.
+            <p class="text-[#2C3A3A] leading-relaxed">
+              O despejo de esgoto doméstico e industrial sem tratamento polui rios, mares e lençóis freáticos, comprometendo a qualidade da água.
             </p>
           </div>
 
           <!-- Agrotóxicos e Fertilizantes -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
               <span class="material-symbols-outlined text-[#4C7B6C]">eco</span>
               Agrotóxicos e Fertilizantes
             </h3>
-            <p class="text-[#2C3A3A]">
-              Produtos químicos usados na agricultura infiltram no solo e atingem as águas subterrâneas, prejudicando ecossistemas.
+            <p class="text-[#2C3A3A] leading-relaxed">
+              Produtos químicos usados na agricultura infiltram no solo e atingem as águas subterrâneas, prejudicando ecossistemas inteiros.
             </p>
           </div>
 
           <!-- Desmatamento -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
               <span class="material-symbols-outlined text-[#4C7B6C]">forest</span>
               Desmatamento
             </h3>
-            <p class="text-[#2C3A3A]">
-              A retirada da vegetação reduz a filtragem natural da água e causa o assoreamento de rios e lagos.
+            <p class="text-[#2C3A3A] leading-relaxed">
+              A retirada da vegetação reduz a filtragem natural da água e causa o assoreamento de rios e lagos, agravando o desequilíbrio ambiental.
             </p>
           </div>
         </div>
