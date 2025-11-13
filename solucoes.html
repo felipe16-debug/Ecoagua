@@ -1,29 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soluções para a Poluição Hídrica</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-</head>
-<body class="bg-cover bg-center text-white min-h-screen" style="background-image: url('fundo.jpg');">
-  <header class="bg-black/60 p-4">
-    <nav class="flex justify-center space-x-6">
-      <a href="index.html" class="hover:text-teal-300">Início</a>
-      <a href="causas.html" class="hover:text-teal-300">Causas</a>
-      <a href="consequencias.html" class="hover:text-teal-300">Consequências</a>
-      <a href="solucoes.html" class="text-teal-400 font-bold">Soluções</a>
-    </nav>
-  </header>
+  <meta name="description" content="Conheça as soluções e ações para combater a poluição hídrica, preservar os rios e garantir água limpa para o futuro.">
+  <title>EcoÁgua - Soluções para a Poluição Hídrica</title>
 
-  <main class="max-w-4xl mx-auto bg-black/60 p-6 rounded-2xl mt-10">
-    <h1 class="text-4xl font-bold mb-6 text-teal-300">Soluções para a Poluição Hídrica</h1>
-    <p class="text-lg leading-relaxed">
-      Existem diversas maneiras de reduzir e até evitar a poluição das águas.  
-      O tratamento adequado do esgoto doméstico e industrial é uma das medidas mais eficazes.  
-      A redução do uso de plásticos, o descarte correto de resíduos e o incentivo à reciclagem também fazem grande diferença.  
-      Além disso, campanhas de conscientização ajudam a educar a população sobre a importância de preservar nossos rios e mares, garantindo um futuro mais sustentável.
-    </p>
-  </main>
+  <!-- Tailwind + Fontes -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .bg-hero {
+      background-image: url('fundo-rio.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body class="bg-hero text-[#2C3A3A] relative">
+  <!-- Camada translúcida -->
+  <div class="absolute inset-0 bg-[#F0E6DD]/80 backdrop-blur-[2px]"></div>
+
+  <!-- Conteúdo -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD]/80 px-5 py-4 backdrop-blur-md shadow-sm sm:px-10 lg:px-20">
+      <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition-colors">
+        <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
+        <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+  <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
+  <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
+  <a href="consequencias.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Consequências</a>
+  <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
+</nav>
+        <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
+        <a href="#solucoes" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="solucoes" class="flex-grow px-5 py-16 sm:px-10 lg:px-20">
+      <div class="mx-auto max-w-6xl text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#2C3A3A] mb-10 tracking-tight">
+          Soluções para a Poluição Hídrica
+        </h2>
+        <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg">
+          A preservação da água é responsabilidade de todos.  
+          Veja algumas ações e medidas que ajudam a reduzir a poluição hídrica e a proteger nossos recursos naturais.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Tratamento de esgoto -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined">science</span>
+              Tratamento de Esgoto
+            </h3>
+            <p class="text-[#2C3A3A]">
+              Investir em estações de tratamento é essencial para evitar que resíduos domésticos e industriais contaminem os rios e mares.
+            </p>
+          </div>
+
+          <!-- Redução do uso de plástico -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined">recycling</span>
+              Redução do Uso de Plástico
+            </h3>
+            <p class="text-[#2C3A3A]">
+              Optar por materiais reutilizáveis e reciclar corretamente o lixo ajuda a diminuir o descarte de plásticos nos oceanos e rios.
+            </p>
+          </div>
+
+          <!-- Educação ambiental -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined">school</span>
+              Educação Ambiental
+            </h3>
+            <p class="text-[#2C3A3A]">
+              Conscientizar as pessoas sobre o uso responsável da água e o descarte correto do lixo é uma das formas mais eficazes de preservar o planeta.
+            </p>
+          </div>
+
+          <!-- Preservação de nascentes -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.02] transition-transform">
+            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
+              <span class="material-symbols-outlined">forest</span>
+              Preservação de Nascentes
+            </h3>
+            <p class="text-[#2C3A3A]">
+              A proteção das áreas de nascentes e matas ciliares é fundamental para garantir a pureza da água e evitar o assoreamento dos rios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C3A3A]/90 text-[#E8D7C1] py-10 text-center mt-10 backdrop-blur-md">
+      <p class="text-sm sm:text-base">
+        © 2025 <span class="font-semibold">EcoÁgua</span>. Todos os direitos reservados. <br>
+        <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
+      </p>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition-transform hover:scale-110">
+      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
+    </button>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const btnTopo = document.getElementById('btnTopo');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btnTopo.classList.remove('hidden');
+        btnTopo.classList.add('flex');
+      } else {
+        btnTopo.classList.add('hidden');
+        btnTopo.classList.remove('flex');
+      }
+    });
+
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
