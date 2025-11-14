@@ -1,189 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Descubra as principais causas da poluição hídrica e como o descarte de lixo, o esgoto sem tratamento e o uso de agrotóxicos afetam o meio ambiente.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Águas Claras - Causas da Poluição Hídrica</title>
 
-  <!-- Tailwind + Fontes -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      background: linear-gradient(to bottom, #f2f6f7 0%, #e4edea 100%);
+      background-color: #ffffff;
+      color: #0F5E53;
+      font-family: Arial, sans-serif;
     }
-
-    .bg-hero {
-      background-image: url('fundo-rio.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    /* Paleta moderna aquática */
-    .bg-water-light { background-color: #C7E5E8; }
-    .bg-water-dark { background-color: #2F5D62; }
-    .bg-water-mid { background-color: #3C888F; }
-    .text-water-dark { color: #2F5D62; }
-    .text-water-mid { color: #3C888F; }
-
-    header {
-      transition: all 0.4s ease;
-    }
-    header.scrolled {
-      background-color: rgba(255, 255, 255, 0.9);
+    .menu-bg {
+      background-color: #ffffff;
       backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .verde-escuro {
+      color: #0F5E53;
     }
-    .animate-fadeIn { animation: fadeIn 0.9s ease-out forwards; }
+    .bg-verde-escuro {
+      background-color: #0F5E53;
+    }
   </style>
 </head>
 
-<body class="text-water-dark relative bg-hero">
-  <!-- Camada de cor para leitura -->
-  <div class="absolute inset-0 bg-white/80 backdrop-blur-[3px]"></div>
+<body>
 
-  <!-- Conteúdo principal -->
-  <div class="relative z-10 min-h-screen flex flex-col">
-
-    <!-- HEADER -->
-    <header class="fixed top-0 w-full z-50 bg-transparent">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-10">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2 text-water-dark font-bold text-lg sm:text-xl">
-          <span class="material-symbols-outlined text-3xl text-water-mid">water_drop</span>
-          Águas Claras
-        </a>
-
-        <!-- Menu desktop -->
-        <nav class="hidden md:flex items-center gap-8 font-medium">
-          <a href="index.html" class="hover:text-water-mid transition">Home</a>
-          <a href="causas.html" class="text-water-mid font-semibold">Causas</a>
-          <a href="consequencias.html" class="hover:text-water-mid transition">Consequências</a>
-          <a href="solucoes.html" class="hover:text-water-mid transition">Soluções</a>
-        </nav>
-
-        <!-- Botão menu mobile -->
-        <button id="menu-btn" class="md:hidden text-water-dark">
-          <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full menu-bg shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/7284/7284148.png" alt="Gota" class="w-7 h-7">
+        <h1 class="text-2xl font-semibold verde-escuro">Águas Claras</h1>
       </div>
 
-      <!-- Menu mobile -->
-      <div id="mobile-menu" class="hidden flex-col bg-water-light border-t border-water-mid/20 text-center md:hidden">
-        <a href="index.html" class="py-3 hover:bg-water-mid/10">Home</a>
-        <a href="causas.html" class="py-3 hover:bg-water-mid/10 font-semibold text-water-mid">Causas</a>
-        <a href="consequencias.html" class="py-3 hover:bg-water-mid/10">Consequências</a>
-        <a href="solucoes.html" class="py-3 hover:bg-water-mid/10">Soluções</a>
-      </div>
-    </header>
+      <button id="menuBtn" class="text-3xl verde-escuro">&#9776;</button>
+    </div>
 
-    <!-- MAIN -->
-    <main id="causas" class="flex-grow pt-28 pb-20 px-6 sm:px-10 lg:px-20 animate-fadeIn">
-      <div class="mx-auto max-w-6xl text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-water-dark mb-10 tracking-tight">
-          Causas da Poluição Hídrica
-        </h2>
-        <p class="max-w-2xl mx-auto text-water-mid mb-14 text-lg">
-          A poluição hídrica é causada por diversas ações humanas que contaminam rios, lagos e oceanos.  
-          Conheça as principais causas e como elas afetam o meio ambiente.
-        </p>
-
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <!-- Descarte de Lixo -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-water-mid/10 hover:-translate-y-2 hover:shadow-2xl transition">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-water-mid">
-              <span class="material-symbols-outlined text-water-mid">delete</span>
-              Descarte de Lixo
-            </h3>
-            <p class="text-water-dark">
-              O acúmulo de resíduos sólidos, como plásticos e metais, contamina a água e ameaça a vida aquática.
-            </p>
-          </div>
-
-          <!-- Esgoto sem Tratamento -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-water-mid/10 hover:-translate-y-2 hover:shadow-2xl transition">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-water-mid">
-              <span class="material-symbols-outlined text-water-mid">factory</span>
-              Esgoto sem Tratamento
-            </h3>
-            <p class="text-water-dark">
-              O despejo de esgoto doméstico e industrial sem tratamento polui rios, mares e lençóis freáticos.
-            </p>
-          </div>
-
-          <!-- Agrotóxicos e Fertilizantes -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-water-mid/10 hover:-translate-y-2 hover:shadow-2xl transition">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-water-mid">
-              <span class="material-symbols-outlined text-water-mid">eco</span>
-              Agrotóxicos e Fertilizantes
-            </h3>
-            <p class="text-water-dark">
-              Produtos químicos usados na agricultura infiltram no solo e atingem as águas subterrâneas, prejudicando ecossistemas.
-            </p>
-          </div>
-
-          <!-- Desmatamento -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-water-mid/10 hover:-translate-y-2 hover:shadow-2xl transition">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-water-mid">
-              <span class="material-symbols-outlined text-water-mid">forest</span>
-              Desmatamento
-            </h3>
-            <p class="text-water-dark">
-              A retirada da vegetação reduz a filtragem natural da água e causa o assoreamento de rios e lagos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-water-dark text-white py-8 text-center">
-      <p class="text-sm opacity-90">
-        © 2025 Águas Claras — Todos os direitos reservados.
-      </p>
-      <a href="index.html" class="text-xs underline hover:text-water-light transition mt-1 inline-block">
-        Voltar à página inicial
-      </a>
-    </footer>
-
-    <!-- Botão Voltar ao Topo -->
-    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-water-mid text-white p-3 rounded-full shadow-lg hover:bg-water-dark transition-transform hover:scale-110">
-      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
-    </button>
-  </div>
+    <!-- MENU MOBILE -->
+    <nav id="mobileMenu" class="hidden flex-col bg-white shadow-md">
+      <a href="index.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Início</a>
+      <a href="causas.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Causas</a>
+      <a href="consequencias.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Consequências</a>
+      <a href="solucoes.html" class="py-3 px-4 verde-escuro">Soluções</a>
+    </nav>
+  </header>
 
   <script>
-    // Header scroll
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
-      header.classList.toggle("scrolled", window.scrollY > 20);
-    });
-
-    // Menu mobile
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
-
-    // Botão voltar ao topo
-    const btnTopo = document.getElementById('btnTopo');
-    window.addEventListener('scroll', () => {
-      btnTopo.classList.toggle('hidden', window.scrollY < 300);
-    });
-    btnTopo.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
+
+  <!-- Espaço para o menu fixo -->
+  <div class="h-24"></div>
+
+  <!-- TÍTULO -->
+  <section class="text-center px-4 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold verde-escuro mb-4">Causas da Poluição Hídrica</h2>
+    <p class="text-lg">
+      A poluição hídrica é resultado de várias ações humanas que comprometem a qualidade da água.
+      Conheça as principais causas desse problema ambiental.
+    </p>
+  </section>
+
+  <!-- CARDS -->
+  <section class="grid md:grid-cols-2 gap-8 px-4 py-10 max-w-5xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/10250/10250617.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-2 verde-escuro">Descarte de Lixo nos Rios</h3>
+        <p>
+          Sacolas, garrafas, plásticos e resíduos sólidos são jogados diretamente em rios e mares,
+          causando contaminação e prejudicando ecossistemas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/10001/10001318.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-2 verde-escuro">Esgoto Sem Tratamento</h3>
+        <p>
+          Milhões de litros de esgoto são despejados diariamente sem tratamento,
+          contaminando rios e prejudicando a saúde pública.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9903/9903952.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-2 verde-escuro">Uso Excessivo de Plástico</h3>
+        <p>
+          Plásticos descartáveis poluem mares e rios, prejudicando animais aquáticos
+          e aumentando o acúmulo de microplásticos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/8051/8051983.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-2 verde-escuro">Indústrias Poluentes</h3>
+        <p>
+          Indústrias despejam resíduos químicos e tóxicos que contaminam a água
+          e afetam todo o ecossistema.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="text-center py-6 verde-escuro font-medium">
+    © 2025 Águas Claras — Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
