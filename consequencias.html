@@ -1,151 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Águas Claras - Consequências da Poluição Hídrica</title>
 
-  <!-- Tailwind e fontes -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { 
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      background-color: #F0E6DD; /* Fundo igual ao causas.html */
+    body {
+      background-color: #ffffff; /* Fundo branco igual ao index */
     }
-
-    /* Animação dos cards */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.7s ease;
+    .menu-bg {
+      background-color: #ffffff;
+      backdrop-filter: blur(12px);
     }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .verde-escuro {
+      color: #0F5E53;
+    }
+    .bg-verde-escuro {
+      background-color: #0F5E53;
+    }
+    .bg-verde-medio {
+      background-color: #2F8F7F;
     }
   </style>
+
 </head>
+<body class="text-[#0F5E53]">
 
-<body class="text-[#2C3A3A]">
-  <!-- Container principal -->
-  <div class="min-h-screen flex flex-col">
-
-    <!-- HEADER -->
-    <header class="sticky top-0 z-50 bg-[#F0E6DD]/90 backdrop-blur-md border-b border-[#7A5C47]/20 shadow-sm px-6 py-4 sm:px-10 lg:px-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition">
-        <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
-        <h1 class="text-xl font-extrabold tracking-tight">Águas Claras</h1>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-[#4C7B6C] transition">Home</a>
-        <a href="causas.html" class="hover:text-[#4C7B6C] transition">Causas</a>
-        <a href="consequencias.html" class="text-[#4C7B6C] border-b-2 border-[#4C7B6C] pb-1">Consequências</a>
-        <a href="solucoes.html" class="hover:text-[#4C7B6C] transition">Soluções</a>
-      </nav>
-    </header>
-
-    <!-- MAIN -->
-    <main class="px-6 py-16 sm:px-10 lg:px-20 flex-grow">
-      <div class="mx-auto max-w-5xl text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#2C3A3A] mb-8 tracking-tight">
-          Consequências da Poluição Hídrica
-        </h2>
-
-        <p class="max-w-2xl mx-auto text-lg leading-relaxed text-[#2C3A3A]/90 mb-14">
-          A poluição hídrica afeta profundamente o meio ambiente, os animais aquáticos e a saúde humana.  
-          Confira abaixo as principais consequências desse problema.
-        </p>
-
-        <!-- CARDS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- Card 1 -->
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
-            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
-              <span class="material-symbols-outlined">warning</span>
-              Contaminação da Água Potável
-            </h3>
-            <p>
-              A presença de produtos químicos e resíduos tóxicos compromete o acesso à água potável, afetando a saúde das comunidades.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
-            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
-              <span class="material-symbols-outlined">cruelty_free</span>
-              Morte de Animais Aquáticos
-            </h3>
-            <p>
-              O descarte de plástico, esgoto e substâncias químicas gera desequilíbrio ecológico, causando a morte de peixes, tartarugas e diversas espécies.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
-            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
-              <span class="material-symbols-outlined">coronavirus</span>
-              Doenças de Veiculação Hídrica
-            </h3>
-            <p>
-              A água contaminada aumenta casos de diarreia, leptospirose, hepatite A e outras doenças graves que ameaçam populações vulneráveis.
-            </p>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
-            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
-              <span class="material-symbols-outlined">eco</span>
-              Destruição de Ecossistemas
-            </h3>
-            <p>
-              A degradação da água compromete os habitats naturais, prejudicando a biodiversidade e a estabilidade dos ecossistemas.
-            </p>
-          </div>
-
-        </div>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full menu-bg shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/7284/7284148.png" alt="Gota" class="w-7 h-7">
+        <h1 class="text-2xl font-semibold verde-escuro">Águas Claras</h1>
       </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#2C3A3A] text-[#F0E6DD] py-10 text-center mt-10">
-      <p class="text-sm sm:text-base">
-        © 2025 <span class="font-semibold">Águas Claras</span>. Todos os direitos reservados.<br />
-        <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
-      </p>
-    </footer>
+      <button id="menuBtn" class="text-3xl verde-escuro">&#9776;</button>
+    </div>
 
-    <!-- BOTÃO VOLTAR AO TOPO -->
-    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition hover:scale-110">
-      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
-    </button>
+    <!-- MENU MOBILE -->
+    <nav id="mobileMenu" class="hidden flex-col bg-white shadow-md">
+      <a href="index.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Início</a>
+      <a href="causas.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Causas</a>
+      <a href="consequencias.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Consequências</a>
+      <a href="solucoes.html" class="py-3 px-4 verde-escuro">Soluções</a>
+    </nav>
+  </header>
 
-  </div>
-
-  <!-- SCRIPT -->
   <script>
-    // Animação dos cards
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.2 });
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Botão voltar ao topo
-    const btnTopo = document.getElementById('btnTopo');
-
-    window.addEventListener('scroll', () => {
-      btnTopo.classList.toggle('hidden', window.scrollY < 300);
-    });
-
-    btnTopo.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
+
+  <!-- ESPAÇO POR CAUSA DO MENU FIXO -->
+  <div class="h-24"></div>
+
+  <!-- TÍTULO -->
+  <section class="text-center px-4 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold verde-escuro mb-4">Consequências da Poluição Hídrica</h2>
+    <p class="text-lg verde-escuro">
+      A poluição hídrica causa danos ambientais, sociais e à saúde humana.  
+      Veja abaixo as principais consequências desse problema.
+    </p>
+  </section>
+
+  <!-- CARDS -->
+  <section class="grid md:grid-cols-2 gap-8 px-4 py-10 max-w-5xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9849/9849336.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Morte de Animais</h3>
+        <p class="mb-4">Peixes, tartarugas e outros animais marinhos morrem devido ao lixo e produtos tóxicos despejados na água.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9790/9790522.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Doenças</h3>
+        <p class="mb-4">Água contaminada transmite doenças graves como diarreia, cólera e hepatite A.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933847.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Escassez de Água</h3>
+        <p class="mb-4">A poluição reduz a quantidade de água potável disponível para consumo humano.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9800/9800928.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Impactos Econômicos</h3>
+        <p class="mb-4">O tratamento da água fica mais caro e atividades como pesca e turismo são prejudicadas.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 bg-verde-medio text-white px-5 py-3 rounded-full shadow-lg">
+    ↑ Topo
+  </button>
+
+  <!-- RODAPÉ -->
+  <footer class="text-center py-6 verde-escuro font-medium">
+    © 2025 Águas Claras — Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
