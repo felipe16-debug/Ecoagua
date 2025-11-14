@@ -59,40 +59,53 @@
       50% { transform: translateY(-8px); }
     }
     .animate-float { animation: float 3s ease-in-out infinite; }
+    @keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s ease-out forwards;
+}
   </style>
 </head>
 
 <body>
   <div class="flex min-h-screen flex-col">
 
-    <!-- 🔷 HEADER -->
-    <header class="fixed top-0 w-full z-50 transition-all border-b border-teal-200 bg-white/80 backdrop-blur-md">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-10">
-        <a href="index.html" class="flex items-center gap-2 text-teal-700">
-          <span class="material-symbols-outlined text-3xl text-teal-700">water_drop</span>
-          <h1 class="text-lg font-bold sm:text-xl">Águas Claras</h1>
-        </a>
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-teal-100 shadow-sm">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-        <nav class="hidden md:flex items-center gap-8 font-medium text-teal-800">
-          <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-          <a href="causas.html" class="hover:text-teal-600 transition">Causas</a>
-          <a href="consequencias.html" class="hover:text-teal-600 transition">Consequências</a>
-          <a href="solucoes.html" class="hover:text-teal-600 transition">Soluções</a>
-        </nav>
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-4xl text-teal-700">water_drop</span>
+      <h1 class="text-2xl font-semibold text-teal-800">Águas Claras</h1>
+    </a>
 
-        <button id="menu-btn" class="md:hidden text-teal-700">
-          <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-      </div>
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center gap-10">
+      <a href="index.html" class="text-teal-800 hover:text-teal-600 transition">Home</a>
+      <a href="causas.html" class="text-teal-800 hover:text-teal-600 transition">Causas</a>
+      <a href="consequencias.html" class="text-teal-800 hover:text-teal-600 transition">Consequências</a>
+      <a href="solucoes.html" class="text-teal-800 hover:text-teal-600 transition">Soluções</a>
+    </nav>
 
-      <div id="mobile-menu" class="hidden flex-col bg-white text-center border-t border-teal-200 md:hidden">
-        <a href="index.html" class="py-3 hover:bg-teal-50">Home</a>
-        <a href="causas.html" class="py-3 hover:bg-teal-50">Causas</a>
-        <a href="consequencias.html" class="py-3 hover:bg-teal-50">Consequências</a>
-        <a href="solucoes.html" class="py-3 hover:bg-teal-50">Soluções</a>
-      </div>
+    <!-- Ícone menu mobile -->
+    <button id="menu-btn" class="md:hidden">
+      <span class="material-symbols-outlined text-4xl text-teal-700">menu</span>
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu"
+       class="hidden flex-col bg-white/95 backdrop-blur-lg border-t border-teal-100 text-center shadow-lg md:hidden animate-slideDown">
+
+    <a href="index.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Home</a>
+    <a href="causas.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Causas</a>
+    <a href="consequencias.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Consequências</a>
+    <a href="solucoes.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Soluções</a>
+  </div>
     </header>
-
     <!-- 💧 HERO SECTION -->
     <section class="pt-28 pb-20 bg-[url('agua.jpg')] bg-cover bg-center text-white text-center relative">
       <div class="absolute inset-0 bg-teal-900/50"></div>
