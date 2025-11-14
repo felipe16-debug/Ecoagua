@@ -13,6 +13,29 @@
   <meta name="description" content="Descubra as causas, consequências e soluções para a poluição hídrica. Águas Claras é um site educativo que promove a conscientização ambiental e a preservação das águas.">
 
   <style type="text/tailwindcss">
+    
+.fx-liquid {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fx-liquid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120%;
+  height: 180%;
+  background: rgba(255, 255, 255, 0.25);
+  filter: blur(20px);
+  transform: translate(-10%, -60%);
+  transition: 0.5s;
+}
+
+.fx-liquid:hover::before {
+  transform: translate(-10%, -20%);
+}
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(180deg, #EAF7F9 0%, #F7FAFA 100%);
@@ -96,7 +119,7 @@
             <div class="p-6">
               <h4 class="text-2xl font-bold mb-2 text-teal-800">Causas</h4>
               <p class="text-teal-700 mb-4">Entenda as origens do problema e como evitá-las.</p>
-              <a href="causas.html" class="inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
+              <a href="causas.html" class="fx-liquid inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
 
