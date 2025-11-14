@@ -1,78 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoÁgua - Soluções</title>
+  <title>Águas Claras - Soluções para a Poluição Hídrica</title>
 
   <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #ffffff; /* Fundo branco padrão */
+    }
+    .menu-bg {
+      background-color: #ffffff;
+      backdrop-filter: blur(12px);
+    }
+    .verde-escuro {
+      color: #0F5E53;
+    }
+    .bg-verde-escuro {
+      background-color: #0F5E53;
+    }
+    .bg-verde-medio {
+      background-color: #2F8F7F;
+    }
+  </style>
 </head>
 
-<body class="bg-[#F0E6DD] text-gray-900">
+<body class="text-[#0F5E53]">
 
-  <!-- CABEÇALHO -->
-  <header class="bg-[#2C3A3A] text-white py-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <h1 class="text-2xl font-bold">EcoÁgua</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:text-[#A0D6C2] transition">Início</a>
-        <a href="causas.html" class="hover:text-[#A0D6C2] transition">Causas</a>
-        <a href="consequencias.html" class="hover:text-[#A0D6C2] transition">Consequências</a>
-        <a href="solucoes.html" class="hover:text-[#A0D6C2] transition font-semibold underline">Soluções</a>
-      </nav>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full menu-bg shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/7284/7284148.png" alt="Gota" class="w-7 h-7">
+        <h1 class="text-2xl font-semibold verde-escuro">Águas Claras</h1>
+      </div>
+
+      <button id="menuBtn" class="text-3xl verde-escuro">&#9776;</button>
     </div>
+
+    <!-- MENU MOBILE -->
+    <nav id="mobileMenu" class="hidden flex-col bg-white shadow-md">
+      <a href="index.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Início</a>
+      <a href="causas.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Causas</a>
+      <a href="consequencias.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Consequências</a>
+      <a href="solucoes.html" class="py-3 px-4 verde-escuro">Soluções</a>
+    </nav>
   </header>
 
-  <!-- CONTEÚDO -->
-  <main class="container mx-auto px-6 py-12">
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
-    <h2 class="text-4xl font-bold text-[#4C7B6C] mb-8 text-center">
-      Soluções para Reduzir a Poluição Hídrica
-    </h2>
+  <!-- ESPAÇO DO MENU FIXO -->
+  <div class="h-24"></div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+  <!-- TÍTULO -->
+  <section class="text-center px-4 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold verde-escuro mb-4">Soluções para a Poluição Hídrica</h2>
+    <p class="text-lg verde-escuro">
+      Para combater a poluição hídrica, é essencial adotar medidas eficientes que protejam rios,
+      mares e fontes de água potável. Confira abaixo algumas das principais soluções.
+    </p>
+  </section>
 
-      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
-        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Tratamento de Esgoto</h3>
-        <p class="text-gray-700">
-          Investir em sistemas eficientes reduz drasticamente a contaminação dos rios e oceanos.
+  <!-- CARDS -->
+  <section class="grid md:grid-cols-2 gap-8 px-4 py-10 max-w-5xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9904/9904378.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Tratamento de Esgoto</h3>
+        <p>
+          Investir em sistemas modernos de tratamento de esgoto reduz a contaminação de rios e mares.
         </p>
       </div>
-
-      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
-        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Redução de Plásticos</h3>
-        <p class="text-gray-700">
-          Optar por materiais reutilizáveis diminui o lixo descartado incorretamente nos ambientes aquáticos.
-        </p>
-      </div>
-
-      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
-        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Educação Ambiental</h3>
-        <p class="text-gray-700">
-          Ensinar crianças e adultos sobre preservação ajuda a construir um futuro sustentável.
-        </p>
-      </div>
-
-      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
-        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Coleta Seletiva</h3>
-        <p class="text-gray-700">
-          Separar corretamente os resíduos evita que lixo vá parar nos rios, lagos e mares.
-        </p>
-      </div>
-
     </div>
-  </main>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9923/9923821.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Reciclagem e Redução do Lixo</h3>
+        <p>
+          Reduzir o descarte incorreto de resíduos e incentivar a reciclagem ajuda a manter rios e oceanos limpos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9903/9903924.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Uso Consciente da Água</h3>
+        <p>
+          Práticas simples como evitar desperdícios ajudam a preservar a quantidade de água limpa disponível.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="bg-verde-escuro h-40 flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/9923/9923834.png" class="w-20">
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-semibold verde-escuro mb-2">Educação Ambiental</h3>
+        <p>
+          Conscientizar a população sobre os impactos do lixo na água gera mudanças reais em longo prazo.
+        </p>
+      </div>
+    </div>
+
+  </section>
 
   <!-- BOTÃO VOLTAR AO TOPO -->
   <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="fixed bottom-6 right-6 bg-[#4C7B6C] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#2C3A3A] transition">
+    class="fixed bottom-6 right-6 bg-verde-medio text-white px-5 py-3 rounded-full shadow-lg">
     ↑ Topo
   </button>
 
   <!-- RODAPÉ -->
-  <footer class="bg-[#2C3A3A] text-white text-center py-4 mt-12">
-    <p>EcoÁgua © 2025 - Preservando o futuro com consciência</p>
+  <footer class="text-center py-6 verde-escuro font-medium">
+    © 2025 Águas Claras — Todos os direitos reservados.
   </footer>
 
 </body>
