@@ -1,182 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça as soluções e ações para combater a poluição hídrica, preservar os rios e garantir água limpa para o futuro.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoÁgua - Soluções</title>
 
-  <!-- Tailwind + Fontes -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
-  <style>
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-
-    .bg-hero {
-      background-image: url('fundo-rio.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    /* Animações suaves */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
-<body class="bg-hero text-[#2C3A3A] relative">
-  <!-- Camada translúcida -->
-  <div class="absolute inset-0 bg-[#F0E6DD]/80 backdrop-blur-[2px]"></div>
+<body class="bg-[#F0E6DD] text-gray-900">
 
-  <!-- Conteúdo -->
-  <div class="relative z-10 min-h-screen flex flex-col">
-
-    <!-- Header -->
-    <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD]/80 px-5 py-4 backdrop-blur-md shadow-sm sm:px-10 lg:px-20">
-      <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition-colors">
-        <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
-        <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
-        <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
-        <a href="consequencias.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Consequências</a>
-        <a href="solucoes.html" class="text-sm font-medium text-[#4C7B6C] border-b-2 border-[#4C7B6C]">Soluções</a>
+  <!-- CABEÇALHO -->
+  <header class="bg-[#2C3A3A] text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-bold">EcoÁgua</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-[#A0D6C2] transition">Início</a>
+        <a href="causas.html" class="hover:text-[#A0D6C2] transition">Causas</a>
+        <a href="consequencias.html" class="hover:text-[#A0D6C2] transition">Consequências</a>
+        <a href="solucoes.html" class="hover:text-[#A0D6C2] transition font-semibold underline">Soluções</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main -->
-    <main id="solucoes" class="flex-grow px-5 py-16 sm:px-10 lg:px-20">
-      <div class="mx-auto max-w-6xl text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold mb-10 tracking-tight bg-gradient-to-r from-[#4C7B6C] to-[#2C3A3A] bg-clip-text text-transparent">
-          Soluções para a Poluição Hídrica
-        </h2>
+  <!-- CONTEÚDO -->
+  <main class="container mx-auto px-6 py-12">
 
-        <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg leading-relaxed">
-          A preservação da água depende de ações coletivas e conscientes.  
-          Confira as principais soluções e atitudes que ajudam a combater a poluição hídrica e proteger nosso planeta.
+    <h2 class="text-4xl font-bold text-[#4C7B6C] mb-8 text-center">
+      Soluções para Reduzir a Poluição Hídrica
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
+        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Tratamento de Esgoto</h3>
+        <p class="text-gray-700">
+          Investir em sistemas eficientes reduz drasticamente a contaminação dos rios e oceanos.
         </p>
-
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- Tratamento de esgoto -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">science</span>
-              Tratamento de Esgoto
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Investir em sistemas de tratamento de esgoto é essencial para impedir que resíduos contaminem rios e mares, preservando a qualidade da água.
-            </p>
-          </div>
-
-          <!-- Redução do uso de plástico -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">recycling</span>
-              Redução do Uso de Plástico
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Evitar descartáveis, reciclar corretamente e escolher materiais sustentáveis ajudam a reduzir o acúmulo de lixo nos oceanos e rios.
-            </p>
-          </div>
-
-          <!-- Educação ambiental -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">school</span>
-              Educação Ambiental
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Ensinar desde cedo a importância do consumo consciente e da preservação dos recursos naturais é um passo essencial para o futuro sustentável.
-            </p>
-          </div>
-
-          <!-- Preservação de nascentes -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">forest</span>
-              Preservação de Nascentes
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Manter as matas ciliares e proteger as nascentes garante o fluxo limpo e constante da água, evitando erosões e o assoreamento dos rios.
-            </p>
-          </div>
-
-          <!-- Legislação e fiscalização -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">gavel</span>
-              Legislação e Fiscalização
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Criar e aplicar leis ambientais mais rigorosas é essencial para impedir o despejo irregular de resíduos e proteger os recursos hídricos.
-            </p>
-          </div>
-
-          <!-- Consumo consciente -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined">water_drop</span>
-              Consumo Consciente de Água
-            </h3>
-            <p class="text-[#2C3A3A]">
-              Pequenas atitudes diárias, como fechar a torneira ao escovar os dentes e reutilizar água da chuva, fazem grande diferença na preservação hídrica.
-            </p>
-          </div>
-
-        </div>
       </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#2C3A3A]/90 text-[#E8D7C1] py-10 text-center mt-10 backdrop-blur-md">
-      <p class="text-sm sm:text-base">
-        © 2025 <span class="font-semibold">EcoÁgua</span>. Todos os direitos reservados. <br>
-        <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
-      </p>
-    </footer>
+      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
+        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Redução de Plásticos</h3>
+        <p class="text-gray-700">
+          Optar por materiais reutilizáveis diminui o lixo descartado incorretamente nos ambientes aquáticos.
+        </p>
+      </div>
 
-    <!-- Botão Voltar ao Topo -->
-    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition-transform hover:scale-110">
-      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
-    </button>
-  </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
+        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Educação Ambiental</h3>
+        <p class="text-gray-700">
+          Ensinar crianças e adultos sobre preservação ajuda a construir um futuro sustentável.
+        </p>
+      </div>
 
-  <!-- Script -->
-  <script>
-    // Animação dos cards
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+      <div class="bg-white shadow-lg rounded-lg p-6 border border-[#7A5C47]/20 hover:scale-[1.02] transition">
+        <h3 class="text-2xl font-bold text-[#2C3A3A] mb-3">Coleta Seletiva</h3>
+        <p class="text-gray-700">
+          Separar corretamente os resíduos evita que lixo vá parar nos rios, lagos e mares.
+        </p>
+      </div>
 
-    // Botão Voltar ao Topo
-    const btnTopo = document.getElementById('btnTopo');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        btnTopo.classList.remove('hidden');
-      } else {
-        btnTopo.classList.add('hidden');
-      }
-    });
-    btnTopo.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+    </div>
+  </main>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 bg-[#4C7B6C] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#2C3A3A] transition">
+    ↑ Topo
+  </button>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-[#2C3A3A] text-white text-center py-4 mt-12">
+    <p>EcoÁgua © 2025 - Preservando o futuro com consciência</p>
+  </footer>
+
 </body>
 </html>
