@@ -3,24 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoÁgua - Consequências</title>
+  <title>Águas Claras - Consequências da Poluição Hídrica</title>
 
-  <!-- Tailwind e Fontes -->
+  <!-- Tailwind e fontes -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
   <style>
-    body {
+    body { 
       font-family: 'Inter', sans-serif;
-      background-color: #F0E6DD;
       scroll-behavior: smooth;
+      background-color: #F0E6DD; /* Fundo igual ao causas.html */
     }
 
+    /* Animação dos cards */
     .fade-up {
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
+      transform: translateY(40px);
+      transition: all 0.7s ease;
     }
     .fade-up.visible {
       opacity: 1;
@@ -30,75 +31,80 @@
 </head>
 
 <body class="text-[#2C3A3A]">
+  <!-- Container principal -->
   <div class="min-h-screen flex flex-col">
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD] px-5 py-4 backdrop-blur-sm shadow-sm sm:px-10 lg:px-20">
+    <header class="sticky top-0 z-50 bg-[#F0E6DD]/90 backdrop-blur-md border-b border-[#7A5C47]/20 shadow-sm px-6 py-4 sm:px-10 lg:px-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition">
         <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
-        <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
+        <h1 class="text-xl font-extrabold tracking-tight">Águas Claras</h1>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C]">Home</a>
-        <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C]">Causas</a>
-        <a href="consequencias.html" class="text-sm font-medium text-[#4C7B6C] border-b-2 border-[#4C7B6C]">Consequências</a>
-        <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C]">Soluções</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#4C7B6C] transition">Home</a>
+        <a href="causas.html" class="hover:text-[#4C7B6C] transition">Causas</a>
+        <a href="consequencias.html" class="text-[#4C7B6C] border-b-2 border-[#4C7B6C] pb-1">Consequências</a>
+        <a href="solucoes.html" class="hover:text-[#4C7B6C] transition">Soluções</a>
       </nav>
     </header>
 
     <!-- MAIN -->
-    <main class="flex-grow px-5 py-16 sm:px-10 lg:px-20">
-      <div class="mx-auto max-w-6xl text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold mb-10 tracking-tight bg-gradient-to-r from-[#4C7B6C] to-[#2C3A3A] bg-clip-text text-transparent">
+    <main class="px-6 py-16 sm:px-10 lg:px-20 flex-grow">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#2C3A3A] mb-8 tracking-tight">
           Consequências da Poluição Hídrica
         </h2>
 
-        <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg leading-relaxed">
-          A poluição hídrica afeta profundamente o meio ambiente, os animais aquáticos e a saúde humana.
+        <p class="max-w-2xl mx-auto text-lg leading-relaxed text-[#2C3A3A]/90 mb-14">
+          A poluição hídrica afeta profundamente o meio ambiente, os animais aquáticos e a saúde humana.  
           Confira abaixo as principais consequências desse problema.
         </p>
 
         <!-- CARDS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:shadow-2xl hover:scale-[1.03] transition">
-            <h3 class="text-2xl font-semibold mb-3 text-[#4C7B6C] flex items-center gap-2">
-              <span class="material-symbols-outlined">pets</span>
+          <!-- Card 1 -->
+          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
+            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
+              <span class="material-symbols-outlined">warning</span>
+              Contaminação da Água Potável
+            </h3>
+            <p>
+              A presença de produtos químicos e resíduos tóxicos compromete o acesso à água potável, afetando a saúde das comunidades.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
+            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
+              <span class="material-symbols-outlined">cruelty_free</span>
               Morte de Animais Aquáticos
             </h3>
             <p>
-              Substâncias tóxicas e a redução do oxigênio nos rios e mares levam à morte de peixes e outras espécies.
+              O descarte de plástico, esgoto e substâncias químicas gera desequilíbrio ecológico, causando a morte de peixes, tartarugas e diversas espécies.
             </p>
           </div>
 
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:shadow-2xl hover:scale-[1.03] transition">
-            <h3 class="text-2xl font-semibold mb-3 text-[#4C7B6C] flex items-center gap-2">
-              <span class="material-symbols-outlined">medical_services</span>
-              Doenças em Humanos
+          <!-- Card 3 -->
+          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
+            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
+              <span class="material-symbols-outlined">coronavirus</span>
+              Doenças de Veiculação Hídrica
             </h3>
             <p>
-              O consumo de água contaminada causa doenças como cólera, hepatite e infecções graves.
+              A água contaminada aumenta casos de diarreia, leptospirose, hepatite A e outras doenças graves que ameaçam populações vulneráveis.
             </p>
           </div>
 
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:shadow-2xl hover:scale-[1.03] transition">
-            <h3 class="text-2xl font-semibold mb-3 text-[#4C7B6C] flex items-center gap-2">
+          <!-- Card 4 -->
+          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/15 hover:scale-[1.03] transition-all">
+            <h3 class="text-2xl font-semibold flex items-center gap-2 text-[#4C7B6C] mb-3">
               <span class="material-symbols-outlined">eco</span>
-              Desequilíbrio Ambiental
+              Destruição de Ecossistemas
             </h3>
             <p>
-              A perda de espécies e a contaminação dos ecossistemas prejudicam toda a cadeia alimentar.
-            </p>
-          </div>
-
-          <div class="fade-up bg-white rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:shadow-2xl hover:scale-[1.03] transition">
-            <h3 class="text-2xl font-semibold mb-3 text-[#4C7B6C] flex.items-center gap-2">
-              <span class="material-symbols-outlined">attach_money</span>
-              Prejuízos Econômicos
-            </h3>
-            <p>
-              A poluição prejudica a pesca, o turismo e o abastecimento, gerando danos financeiros.
+              A degradação da água compromete os habitats naturais, prejudicando a biodiversidade e a estabilidade dos ecossistemas.
             </p>
           </div>
 
@@ -107,35 +113,39 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-[#2C3A3A] text-[#E8D7C1] py-10 text-center mt-10">
+    <footer class="bg-[#2C3A3A] text-[#F0E6DD] py-10 text-center mt-10">
       <p class="text-sm sm:text-base">
-        © 2025 <span class="font-semibold">EcoÁgua</span>. Todos os direitos reservados.
-        <br>
+        © 2025 <span class="font-semibold">Águas Claras</span>. Todos os direitos reservados.<br />
         <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
       </p>
     </footer>
 
-    <!-- BOTÃO TOPO -->
-    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] hover:scale-110 transition">
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition hover:scale-110">
       <span class="material-symbols-outlined text-3xl">arrow_upward</span>
     </button>
+
   </div>
 
+  <!-- SCRIPT -->
   <script>
+    // Animação dos cards
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    const btn = document.getElementById("btnTopo");
-    window.addEventListener("scroll", () => {
-      window.scrollY > 300 ? btn.classList.remove("hidden") : btn.classList.add("hidden");
+    // Botão voltar ao topo
+    const btnTopo = document.getElementById('btnTopo');
+
+    window.addEventListener('scroll', () => {
+      btnTopo.classList.toggle('hidden', window.scrollY < 300);
     });
-    btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-  </script>
 
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
