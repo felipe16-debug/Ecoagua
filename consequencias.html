@@ -1,162 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubra as consequências da poluição hídrica para o meio ambiente, os animais e a saúde humana.">
-  <title>EcoÁgua - Consequências</title>
-
-  <!-- Tailwind e fontes -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    .bg-hero {
-      background-image: url('fundo-rio.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    /* Animações suaves */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Águas Claras - Consequências da Poluição Hídrica</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
+<body class="bg-green-50 text-gray-800 font-sans">
 
-<body class="bg-hero text-[#2C3A3A] relative">
-  <!-- Camada de cor -->
-  <div class="absolute inset-0 bg-[#F0E6DD]/80 backdrop-blur-[2px]"></div>
-
-  <!-- Conteúdo principal -->
-  <div class="relative z-10 min-h-screen flex flex-col">
-
-    <!-- Header -->
-    <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[#7A5C47]/20 bg-[#F0E6DD]/80 px-5 py-4 backdrop-blur-md shadow-sm sm:px-10 lg:px-20 transition-all duration-300">
-      <a href="index.html" class="flex items-center gap-3 text-[#2C3A3A] hover:text-[#4C7B6C] transition-colors">
-        <span class="material-symbols-outlined text-3xl text-[#4C7B6C]">water_drop</span>
-        <h1 class="text-xl font-extrabold tracking-tight">EcoÁgua</h1>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Home</a>
-        <a href="causas.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Causas</a>
-        <a href="consequencias.html" class="text-sm font-medium text-[#4C7B6C] border-b-2 border-[#4C7B6C]">Consequências</a>
-        <a href="solucoes.html" class="text-sm font-medium hover:text-[#4C7B6C] transition">Soluções</a>
+  <!-- Menu -->
+  <header class="bg-green-700 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">Águas Claras</h1>
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+          <li><a href="causas.html" class="hover:text-green-200">Causas</a></li>
+          <li><a href="consequencias.html" class="hover:text-green-200 font-semibold">Consequências</a></li>
+          <li><a href="solucoes.html" class="hover:text-green-200">Soluções</a></li>
+        </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main -->
-    <main id="consequencias" class="flex-grow px-5 py-16 sm:px-10 lg:px-20">
-      <div class="mx-auto max-w-6xl text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#2C3A3A] mb-10 tracking-tight bg-gradient-to-r from-[#4C7B6C] to-[#2C3A3A] bg-clip-text text-transparent">
-          Consequências da Poluição Hídrica
-        </h2>
+  <!-- Conteúdo -->
+  <main class="container mx-auto my-10 p-6 bg-white rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold mb-6">Consequências da Poluição Hídrica</h2>
+    <p class="mb-4">A poluição hídrica impacta o meio ambiente, os animais aquáticos e a saúde humana de diversas formas...</p>
+    
+    <ul class="list-disc list-inside space-y-2">
+      <li>Morte de espécies aquáticas.</li>
+      <li>Contaminação da água potável.</li>
+      <li>Doenças de veiculação hídrica.</li>
+      <li>Desequilíbrio do ecossistema.</li>
+    </ul>
+  </main>
 
-        <p class="max-w-2xl mx-auto text-[#3B5745] mb-14 text-lg leading-relaxed">
-          A poluição hídrica causa sérios impactos no meio ambiente, na vida aquática e na saúde humana.
-          Veja abaixo as principais consequências que afetam o equilíbrio natural e a sociedade.
-        </p>
+  <!-- Rodapé -->
+  <footer class="bg-green-700 text-white text-center p-4 mt-10">
+    © 2025 Águas Claras — Todos os direitos reservados.
+  </footer>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Morte de animais aquáticos -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined text-[#4C7B6C]">pets</span>
-              Morte de Animais Aquáticos
-            </h3>
-            <p class="text-[#2C3A3A]">
-              A falta de oxigênio e o descarte de substâncias tóxicas causam a morte de peixes, tartarugas e outras espécies aquáticas.
-            </p>
-          </div>
-
-          <!-- Doenças em humanos -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined text-[#4C7B6C]">medical_services</span>
-              Doenças em Humanos
-            </h3>
-            <p class="text-[#2C3A3A]">
-              A ingestão de água contaminada pode provocar doenças como cólera, hepatite e infecções intestinais graves.
-            </p>
-          </div>
-
-          <!-- Desequilíbrio ambiental -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined text-[#4C7B6C]">eco</span>
-              Desequilíbrio Ambiental
-            </h3>
-            <p class="text-[#2C3A3A]">
-              A perda de espécies e a contaminação dos ecossistemas rompem o equilíbrio natural e afetam a cadeia alimentar.
-            </p>
-          </div>
-
-          <!-- Prejuízos econômicos -->
-          <div class="fade-up bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-[#4C7B6C]/10 hover:scale-[1.03] hover:shadow-2xl transition-all">
-            <h3 class="text-2xl font-semibold mb-3 flex items-center gap-2 text-[#4C7B6C]">
-              <span class="material-symbols-outlined text-[#4C7B6C]">attach_money</span>
-              Prejuízos Econômicos
-            </h3>
-            <p class="text-[#2C3A3A]">
-              A poluição prejudica atividades como a pesca, o turismo e o abastecimento, gerando impactos financeiros e sociais.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#2C3A3A]/90 text-[#E8D7C1] py-10 text-center mt-10 backdrop-blur-md">
-      <p class="text-sm sm:text-base">
-        © 2025 <span class="font-semibold">EcoÁgua</span>. Todos os direitos reservados. <br>
-        <a href="index.html" class="underline hover:text-white transition">Voltar à página inicial</a>
-      </p>
-    </footer>
-
-    <!-- Botão Voltar ao Topo -->
-    <button id="btnTopo" class="fixed bottom-6 right-6 hidden bg-[#4C7B6C] text-white p-3 rounded-full shadow-lg hover:bg-[#3B5745] transition-transform hover:scale-110">
-      <span class="material-symbols-outlined text-3xl">arrow_upward</span>
-    </button>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    // Animação dos cards
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Botão voltar ao topo
-    const btnTopo = document.getElementById('btnTopo');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        btnTopo.classList.remove('hidden');
-      } else {
-        btnTopo.classList.add('hidden');
-      }
-    });
-    btnTopo.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
 </body>
 </html>
