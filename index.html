@@ -8,122 +8,92 @@
   <!-- Tailwind e fontes -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- Material Symbols (modo recomendado) -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <meta name="description" content="Descubra as causas, consequências e soluções para a poluição hídrica. Águas Claras é um site educativo que promove a conscientização ambiental e a preservação das águas.">
 
   <style type="text/tailwindcss">
-    
-.fx-liquid {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.fx-liquid::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 120%;
-  height: 180%;
-  background: rgba(255, 255, 255, 0.25);
-  filter: blur(20px);
-  transform: translate(-10%, -60%);
-  transition: 0.5s;
-}
-
-.fx-liquid:hover::before {
-  transform: translate(-10%, -20%);
-}
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #EAF7F9 0%, #F7FAFA 100%);
-      color: #184E77;
+    /* efeitos e animações */
+    .fx-liquid { position: relative; overflow: hidden; z-index: 1; }
+    .fx-liquid::before {
+      content: "";
+      position: absolute; left: 0; top: 0; width: 120%; height: 180%;
+      background: rgba(255,255,255,0.25); filter: blur(20px);
+      transform: translate(-10%,-60%); transition: 0.5s;
     }
+    .fx-liquid:hover::before { transform: translate(-10%,-20%); }
 
-    header.scrolled {
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(8px);
-    }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg,#EAF7F9 0%,#F7FAFA 100%); color: #184E77; }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    header.scrolled { background-color: rgba(255,255,255,0.9); box-shadow: 0 4px 12px rgba(0,0,0,0.08); backdrop-filter: blur(8px); }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
+    @keyframes float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
     .animate-float { animation: float 3s ease-in-out infinite; }
-    @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
-.animate-slideDown {
-  animation: slideDown 0.25s ease-out forwards;
-}
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-slideDown { animation: slideDown 0.25s ease-out forwards; }
   </style>
 </head>
 
 <body>
   <div class="flex min-h-screen flex-col">
 
-    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-teal-100 shadow-sm">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <!-- HEADER (MODERNO) -->
+    <header id="site-header" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-teal-100 shadow-sm">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Ir para página inicial">
+          <span class="material-symbols-outlined text-4xl text-teal-700">water_drop</span>
+          <h1 class="text-2xl font-semibold text-teal-800">Águas Claras</h1>
+        </a>
 
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-2">
-      <span class="material-symbols-outlined text-4xl text-teal-700">water_drop</span>
-      <h1 class="text-2xl font-semibold text-teal-800">Águas Claras</h1>
-    </a>
+        <nav class="hidden md:flex items-center gap-10" role="navigation" aria-label="Menu principal">
+          <a href="index.html" class="text-teal-800 hover:text-teal-600 transition">Home</a>
+          <a href="causas.html" class="text-teal-800 hover:text-teal-600 transition">Causas</a>
+          <a href="consequencias.html" class="text-teal-800 hover:text-teal-600 transition">Consequências</a>
+          <a href="solucoes.html" class="text-teal-800 hover:text-teal-600 transition">Soluções</a>
+        </nav>
 
-    <!-- Menu Desktop -->
-    <nav class="hidden md:flex items-center gap-10">
-      <a href="index.html" class="text-teal-800 hover:text-teal-600 transition">Home</a>
-      <a href="causas.html" class="text-teal-800 hover:text-teal-600 transition">Causas</a>
-      <a href="consequencias.html" class="text-teal-800 hover:text-teal-600 transition">Consequências</a>
-      <a href="solucoes.html" class="text-teal-800 hover:text-teal-600 transition">Soluções</a>
-    </nav>
+        <button id="menu-btn" class="md:hidden" aria-label="Abrir menu">
+          <span class="material-symbols-outlined text-4xl text-teal-700">menu</span>
+        </button>
+      </div>
 
-    <!-- Ícone menu mobile -->
-    <button id="menu-btn" class="md:hidden">
-      <span class="material-symbols-outlined text-4xl text-teal-700">menu</span>
-    </button>
-  </div>
-
-  <!-- Menu Mobile -->
-  <div id="mobile-menu"
-       class="hidden flex-col bg-white/95 backdrop-blur-lg border-t border-teal-100 text-center shadow-lg md:hidden animate-slideDown">
-
-    <a href="index.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Home</a>
-    <a href="causas.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Causas</a>
-    <a href="consequencias.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Consequências</a>
-    <a href="solucoes.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Soluções</a>
-  </div>
+      <!-- Menu Mobile -->
+      <div id="mobile-menu" class="hidden flex-col bg-white/95 backdrop-blur-lg border-t border-teal-100 text-center shadow-lg md:hidden animate-slideDown" aria-hidden="true">
+        <a href="index.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Home</a>
+        <a href="causas.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Causas</a>
+        <a href="consequencias.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Consequências</a>
+        <a href="solucoes.html" class="py-4 text-teal-800 hover:bg-teal-50 transition">Soluções</a>
+      </div>
     </header>
-    <!-- 💧 HERO SECTION -->
-    <section class="pt-28 pb-20 bg-[url('agua.jpg')] bg-cover bg-center text-white text-center relative">
-      <div class="absolute inset-0 bg-teal-900/50"></div>
+
+    <!-- HERO -->
+    <section class="pt-28 pb-20 bg-cover bg-center text-white text-center relative" style="background-image: url('assets/agua.jpg');">
+      <div class="absolute inset-0 bg-teal-900/65"></div>
       <div class="relative z-10 px-6 sm:px-10 max-w-4xl mx-auto animate-fadeIn">
         <h2 class="text-4xl sm:text-5xl font-extrabold mb-4">Preserve Hoje. Garanta o Amanhã.</h2>
         <p class="text-lg sm:text-xl mb-8 text-teal-100">A poluição hídrica é um desafio global — e cada ação conta. Descubra como mudar essa realidade.</p>
         <a href="solucoes.html" class="inline-block bg-white text-teal-800 font-semibold px-6 py-3 rounded-lg hover:bg-teal-100 transition">Saiba Como Ajudar</a>
       </div>
+
+      <!-- fallback se a imagem não carregar -->
+      <noscript>
+        <div class="relative z-10 px-6 sm:px-10 max-w-4xl mx-auto">
+          <p class="bg-teal-800/70 inline-block rounded-md px-4 py-2">Se a imagem não carregar, mantenha conteúdo acessível.</p>
+        </div>
+      </noscript>
     </section>
 
-    <!-- 💧 MAIN -->
+    <!-- MAIN -->
     <main class="flex-1 py-16 px-6 sm:px-10 lg:px-20 bg-white">
       <div class="mx-auto max-w-6xl text-center animate-fadeIn">
         <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-teal-800">Entenda a Poluição Hídrica</h3>
         <p class="text-teal-700 text-lg mb-12">Explore as causas, consequências e soluções para proteger nossos rios, mares e lagos.</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           <!-- Causas -->
           <div class="rounded-2xl overflow-hidden bg-gradient-to-b from-teal-50 to-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
             <div class="h-48 flex justify-center items-center bg-teal-600 text-white">
@@ -144,9 +114,7 @@
             <div class="p-6">
               <h4 class="text-2xl font-bold mb-2 text-teal-800">Consequências</h4>
               <p class="text-teal-700 mb-4">Os impactos ambientais e sociais causados pela poluição hídrica.</p>
-              <a href="consequencias.html" class="fx-liquid inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">
-  Ver mais
-              </a>
+              <a href="consequencias.html" class="fx-liquid inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
 
@@ -158,47 +126,47 @@
             <div class="p-6">
               <h4 class="text-2xl font-bold mb-2 text-teal-800">Soluções</h4>
               <p class="text-teal-700 mb-4">Ações práticas para reduzir danos e preservar a água.</p>
-              <a href="solucoes.html" class="fx-liquid inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">
-  Ver mais
-              </a>
+              <a href="solucoes.html" class="fx-liquid inline-block bg-teal-700 text-white rounded-lg px-4 py-2 hover:bg-teal-800 transition">Ver mais</a>
             </div>
           </div>
         </div>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-teal-900 text-teal-100 py-10 text-center mt-10">
-  <p class="text-base mb-6 tracking-wide opacity-90">
-    © 2025 Águas Claras — Todos os direitos reservados.
-  </p>
+      <p class="text-base mb-6 tracking-wide opacity-90">© 2025 Águas Claras — Todos os direitos reservados.</p>
 
-  <div class="flex justify-center gap-10 text-teal-200 text-4xl">
-    <a href="#" class="hover:text-white transition">
-      <span class="material-symbols-outlined text-4xl">language</span>
-    </a>
+      <div class="flex justify-center gap-10 text-teal-200 text-4xl">
+        <a href="#" class="hover:text-white transition" aria-label="Site">
+          <span class="material-symbols-outlined">language</span>
+        </a>
 
-    <a href="#" class="hover:text-white transition">
-      <span class="material-symbols-outlined text-4xl">mail</span>
-    </a>
+        <a href="#" class="hover:text-white transition" aria-label="Email">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
 
-    <a href="#" class="hover:text-white transition">
-      <span class="material-symbols-outlined text-4xl">share</span>
-    </a>
-  </div>
+        <a href="#" class="hover:text-white transition" aria-label="Compartilhar">
+          <span class="material-symbols-outlined">share</span>
+        </a>
+      </div>
     </footer>
   </div>
 
   <script>
-    // Header dinâmico
+    // Header scrolled class
     window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
+      const header = document.getElementById("site-header");
       header.classList.toggle("scrolled", window.scrollY > 10);
     });
 
-    // Menu mobile
+    // Mobile menu toggle
     const btn = document.getElementById("menu-btn");
     const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    btn.addEventListener("click", () => {
+      const hidden = menu.classList.toggle("hidden");
+      menu.setAttribute("aria-hidden", hidden ? "true" : "false");
+    });
   </script>
 </body>
 </html>
