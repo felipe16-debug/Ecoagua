@@ -32,12 +32,20 @@
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full menu-bg shadow-md z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <!-- Ícone + Nome -->
       <div class="flex items-center gap-2">
-        <img src="https://cdn-icons-png.flaticon.com/512/7284/7284148.png" alt="Gota" class="w-7 h-7">
+        <img src="https://cdn-icons-png.flaticon.com/512/4144/4144976.png"
+             alt="Gota"
+             class="w-8 h-8">
         <h1 class="text-2xl font-semibold verde-escuro">Águas Claras</h1>
       </div>
 
-      <button id="menuBtn" class="text-3xl verde-escuro">&#9776;</button>
+      <!-- Botão Menu -->
+      <button id="menuBtn" class="text-3xl verde-escuro leading-none">
+        &#9776;
+      </button>
+
     </div>
 
     <!-- MENU MOBILE -->
@@ -47,12 +55,14 @@
       <a href="consequencias.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Consequências</a>
       <a href="solucoes.html" class="py-3 px-4 verde-escuro">Soluções</a>
     </nav>
+
   </header>
 
   <!-- SCRIPT DO MENU -->
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
+
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
