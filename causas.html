@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Águas Claras - Causas da Poluição Hídrica</title>
 
   <!-- Tailwind -->
@@ -18,12 +18,9 @@
       background-color: #ffffff;
       backdrop-filter: blur(12px);
     }
-    .verde-escuro {
-      color: #0F5E53;
-    }
-    .bg-verde-escuro {
-      background-color: #0F5E53;
-    }
+    .verde-escuro { color: #0F5E53; }
+    .bg-verde-escuro { background-color: #0F5E53; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 
@@ -32,106 +29,105 @@
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full menu-bg shadow-md z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <img src="https://cdn-icons-png.flaticon.com/512/7284/7284148.png" alt="Gota" class="w-7 h-7">
+      <div class="flex items-center gap-3">
+        <!-- Use o ícone do seu index se tiver (substitua se quiser) -->
+        <img src="img/logo.png" alt="Logo Águas Claras" class="w-8 h-8" onerror="this.style.display='none'">
         <h1 class="text-2xl font-semibold verde-escuro">Águas Claras</h1>
       </div>
 
-      <button id="menuBtn" class="text-3xl verde-escuro">&#9776;</button>
+      <button id="menuBtn" class="text-3xl verde-escuro leading-none md:hidden">☰</button>
+
+      <!-- menu desktop -->
+      <nav class="hidden md:flex gap-6 text-lg font-medium">
+        <a href="index.html" class="hover:text-[#097A65]">Início</a>
+        <a href="causas.html" class="text-[#097A65] font-bold">Causas</a>
+        <a href="consequencias.html" class="hover:text-[#097A65]">Consequências</a>
+        <a href="solucoes.html" class="hover:text-[#097A65]">Soluções</a>
+      </nav>
     </div>
 
-    <!-- MENU MOBILE -->
-    <nav id="mobileMenu" class="hidden flex-col bg-white shadow-md">
-      <a href="index.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Início</a>
-      <a href="causas.html" class="py-3 px-4 border-b border-gray-200 verde-escuro font-semibold">Causas</a>
-      <a href="consequencias.html" class="py-3 px-4 border-b border-gray-200 verde-escuro">Consequências</a>
-      <a href="solucoes.html" class="py-3 px-4 verde-escuro">Soluções</a>
-    </nav>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <a href="index.html" class="block py-3 px-4">Início</a>
+      <a href="causas.html" class="block py-3 px-4 font-bold">Causas</a>
+      <a href="consequencias.html" class="block py-3 px-4">Consequências</a>
+      <a href="solucoes.html" class="block py-3 px-4">Soluções</a>
+    </div>
   </header>
 
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+    menuBtn && menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
   </script>
 
-  <!-- Espaço -->
+  <!-- espaçamento para header fixo -->
   <div class="h-24"></div>
 
   <!-- TÍTULO -->
-  <section class="text-center px-4 max-w-3xl mx-auto">
+  <section class="text-center px-6 max-w-3xl mx-auto">
     <h2 class="text-4xl font-bold verde-escuro mb-4">Causas da Poluição Hídrica</h2>
-    <p class="text-lg">
+    <p class="text-lg mb-8">
       A poluição hídrica é resultado de várias ações humanas que comprometem a qualidade da água.
       Conheça as principais causas desse problema ambiental.
     </p>
   </section>
 
+  <!-- CAUSAS -->
+  <main class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-  <!-- CAUSAS COM IMAGENS -->
-  <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-        <!-- 1 - Descarte de lixo nos rios -->
-        <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] duration-300">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" 
-               class="w-full h-56 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Descarte de Lixo nos Rios</h3>
-            <p class="text-gray-700">
-              O descarte inadequado de resíduos sólidos polui rios, entope canais, gera doenças e compromete ecossistemas aquáticos.
-            </p>
-          </div>
+      <!-- Descarte de Lixo nos Rios -->
+      <article class="bg-[#E9FBF6] rounded-2xl overflow-hidden shadow-lg">
+        <img src="img/lixo-rio.jpg" alt="Descarte de lixo nos rios" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-[#0F5E53] mb-2">Descarte de Lixo nos Rios</h3>
+          <p class="text-[#06473f]">
+            Sacolas, garrafas e resíduos sólidos jogados nos cursos d'água causam obstrução,
+            poluição e prejuízos à fauna e flora aquática.
+          </p>
         </div>
+      </article>
 
-        <!-- 2 - Esgoto sem tratamento -->
-        <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] duration-300">
-          <img src="https://images.unsplash.com/photo-1608571423739-d284a6c2a1d5?auto=format&fit=crop&w=800&q=80" 
-               class="w-full h-56 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Esgoto Sem Tratamento</h3>
-            <p class="text-gray-700">
-              Sem saneamento básico, toneladas de esgoto são despejadas diariamente em rios e mares, afetando a saúde pública.
-            </p>
-          </div>
+      <!-- Esgoto Sem Tratamento -->
+      <article class="bg-[#E9FBF6] rounded-2xl overflow-hidden shadow-lg">
+        <img src="img/esgoto.jpg" alt="Esgoto sem tratamento" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-[#0F5E53] mb-2">Esgoto Sem Tratamento</h3>
+          <p class="text-[#06473f]">
+            O despejo de esgoto sem tratamento contamina cursos d'água, espalha doenças e degrada a qualidade da água.
+          </p>
         </div>
+      </article>
 
-        <!-- 3 - Uso excessivo de plásticos -->
-        <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] duration-300">
-          <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" 
-               class="w-full h-56 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Uso Excessivo de Plásticos</h3>
-            <p class="text-gray-700">
-              Plásticos descartados incorretamente poluem oceanos e rios, levando séculos para se decompor e causando danos ambientais.
-            </p>
-          </div>
+      <!-- Uso Excessivo de Plásticos -->
+      <article class="bg-[#E9FBF6] rounded-2xl overflow-hidden shadow-lg">
+        <img src="img/plasticos.jpg" alt="Uso excessivo de plásticos" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-[#0F5E53] mb-2">Uso Excessivo de Plásticos</h3>
+          <p class="text-[#06473f]">
+            Plásticos descartados incorretamente acumulam-se em rios e oceanos, formando grandes problemas ambientais.
+          </p>
         </div>
+      </article>
 
-        <!-- 4 - Indústrias poluentes -->
-        <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] duration-300">
-          <img src="https://images.unsplash.com/photo-1502303756780-56d277c1dfb4?auto=format&fit=crop&w=800&q=80" 
-               class="w-full h-56 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Indústrias Poluentes</h3>
-            <p class="text-gray-700">
-              Muitas indústrias despejam resíduos químicos diretamente na água, contaminando rios e prejudicando a vida aquática.
-            </p>
-          </div>
+      <!-- Indústrias Poluentes -->
+      <article class="bg-[#E9FBF6] rounded-2xl overflow-hidden shadow-lg">
+        <img src="img/industria.jpg" alt="Indústrias poluentes" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-[#0F5E53] mb-2">Indústrias Poluentes</h3>
+          <p class="text-[#06473f]">
+            Resíduos industriais e efluentes lançados sem tratamento contaminam rios e colocam em risco ecossistemas inteiros.
+          </p>
         </div>
+      </article>
 
-      </div>
     </div>
-  </section>
+  </main>
 
-
-  <!-- BOTÃO VOLTAR AO TOPO -->
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-          class="fixed bottom-6 right-6 bg-verde-escuro text-white px-4 py-3 rounded-full shadow-lg text-lg">
+  <!-- botão voltar ao topo -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+          class="fixed bottom-6 right-6 bg-[#0F5E53] text-white p-3 rounded-full shadow-lg">
     ↑
   </button>
 
